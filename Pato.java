@@ -1,5 +1,12 @@
+//Métodos: Atacar, correr e descançar
+//Atributos: Mana, stamina, saúde. OS VALORES SÃO FIXOS PARA TODOS OS PATOS
+//Mana: Valor fixo para todos os patos
+//Stamina: Começa fixo. Se atacar, stamina diminui. Se descançar, stamina aumenta
+//Saúde: Se descançar, aumenta 
+
 public class Pato {
 
+    public String nome;
     public int mana;
     public int stamina;
     public int vida;
@@ -28,9 +35,38 @@ public class Pato {
         this.vida = vida;
     }
 
-    public Pato(int mana, int stamina, int vida) {
+    public void atacar () {
+
+    }
+
+    public void correr() {
+        stamina = stamina - 2;
+        if (stamina <= 0) {
+            stamina = 0;
+            System.out.println("Stamina insuficiente!");
+        }
+        else {
+            System.out.println("Correu!");
+        }
+    }
+
+    public void descancar () {
+        vida = vida + 2;
+        stamina = stamina + 2;
+        if (vida >= 10) {
+            vida = 10;
+            System.out.println("Sua vida já está cheia");
+        }
+        else {
+            System.out.println("Vocês está descançando zzz");
+        }
+        
+    }
+
+}
+
+ /*    public Pato (int mana, int stamina, int vida) {
         this.mana = mana;
         this.stamina = stamina;
-        this.vida = vida;
-    }
-}
+        this.vida = vida; */
+
