@@ -36,7 +36,10 @@ public class Pato {
     }
 
     public void atacar () {
-
+        stamina = stamina - 2;
+        if (stamina <= 0 ){
+            System.out.println ("Stamina insuficiente!");
+        }
     }
 
     public void correr() {
@@ -53,14 +56,21 @@ public class Pato {
     public void descancar () {
         vida = vida + 2;
         stamina = stamina + 2;
-        if (vida >= 10) {
+        if (vida >= 10){
             vida = 10;
-            System.out.println("Sua vida já está cheia");
-        }
-        else {
-            System.out.println("Vocês está descançando zzz");
+            System.out.println("Sua vida está cheia");
         }
         
+        if (stamina >= 10){
+            stamina = 10;
+            System.out.println ("Sua stamina está cheia");
+        }
+        if (vida == 10 && stamina == 10){
+            System.out.println ("Sua vida e a sua stamina já estão cheias");
+        }
+        else{  
+            System.out.println ("Descançando zzz");
+        }
     }
 
 }
