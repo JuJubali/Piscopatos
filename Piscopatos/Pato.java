@@ -4,12 +4,17 @@
 //Stamina: Começa fixo. Se atacar, stamina diminui. Se descançar, stamina aumenta
 //Saúde: Se descançar, aumenta 
 
+package Piscopatos;
 public class Pato {
 
     public String nome;
     public int mana;
     public int stamina;
-    public int vida;
+    public int pontodeVida;
+    public int pontodeDano;
+    public int pontodeResistencia;
+    public int pontodeInteligencia;
+
 
     public int getMana() {
         return mana;
@@ -27,12 +32,37 @@ public class Pato {
         this.stamina = stamina;
     }
 
-    public int getVida() {
-        return vida;
+    public int getpontodeVida() {
+        return pontodeVida;
     }
 
-    public void setVida(int vida) {
-        this.vida = vida;
+    public void setPontodeVida(int pontodeVida) {
+        this.pontodeVida = pontodeVida;
+    }
+
+    public int getPontodeDano(){
+        return pontodeDano;
+
+    }
+
+    public void setPontodeDano(int pontodeDano){
+        this.pontodeDano = pontodeDano;
+    }
+
+    public int getPontodeResistencia(){
+        return pontodeResistencia;
+    }
+
+    public void setPontodeResistencia(int pontodeResistencia){
+        this.pontodeResistencia = pontodeResistencia;
+    }
+
+    public int getPontodeInteligencia(){
+        return pontodeInteligencia;
+    }
+
+    public void setPontodeInteligencia(int pontodeInteligencia){
+        this.pontodeInteligencia = pontodeInteligencia;
     }
 
     public void atacar () {
@@ -40,6 +70,7 @@ public class Pato {
         if (stamina <= 0 ){
             System.out.println ("Stamina insuficiente!");
         }
+
     }
 
     public void correr() {
@@ -54,10 +85,10 @@ public class Pato {
     }
 
     public void descancar () {
-        vida = vida + 2;
+        pontodeVida = pontodeVida + 2;
         stamina = stamina + 2;
-        if (vida >= 10){
-            vida = 10;
+        if (pontodeVida >= 10){
+            pontodeVida = 10;
             System.out.println("Sua vida está cheia");
         }
         
@@ -65,12 +96,16 @@ public class Pato {
             stamina = 10;
             System.out.println ("Sua stamina está cheia");
         }
-        if (vida == 10 && stamina == 10){
+        if (pontodeVida == 10 && stamina == 10){
             System.out.println ("Sua vida e a sua stamina já estão cheias");
         }
         else{  
             System.out.println ("Descançando zzz");
         }
+    }
+
+    public void informacoes(){
+        System.out.println("Informações: Mana: " +getMana() +" Stamina: " +getStamina() +" Vida: " +getpontodeVida() +" Dano: " +getPontodeDano() +" Resistência: " +getPontodeResistencia() +" Inteligência: " +getPontodeInteligencia());
     }
 
 }
