@@ -1,11 +1,11 @@
+package Rodolfo;
 //Métodos: Atacar, correr e descançar
 //Atributos: Mana, stamina, saúde. OS VALORES SÃO FIXOS PARA TODOS OS PATOS
 //Mana: Valor fixo para todos os patos
 //Stamina: Começa fixo. Se atacar, stamina diminui. Se descançar, stamina aumenta
 //Saúde: Se descançar, aumenta 
 
-package Piscopatos;
-public class Pato {
+public class Teste {
 
     public String nome;
     public int mana;
@@ -115,3 +115,35 @@ public class Pato {
         this.stamina = stamina;
         this.vida = vida; */
 
+
+public class Teste {
+    public static void main (String[] args) {
+        Pato tank = new Pato();
+            tank.setMana(10);
+            tank.setStamina(10);
+            tank.setPontodeVida(5);
+            tank.setPontodeDano(10);
+            tank.setPontodeResistencia(5);
+            tank.setPontodeInteligencia(2); 
+            tank.informacoes();
+          
+        
+        Pato lutador = new Pato();
+            lutador.setMana(10);
+            lutador.setStamina(10);
+            lutador.setPontodeVida(10);
+            lutador.setPontodeDano(5);
+            lutador.setPontodeResistencia(2);
+            lutador.setPontodeInteligencia(5);
+            lutador.informacoes();
+
+        Pato invocador = new Pato();
+            invocador.setMana(10);
+            invocador.setStamina(10);
+            invocador.setPontodeVida(2);
+            invocador.setPontodeDano(5);
+            invocador.setPontodeResistencia(5);
+            invocador.setPontodeInteligencia(10);
+            invocador.informacoes();
+    }
+}

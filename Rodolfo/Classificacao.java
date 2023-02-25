@@ -1,5 +1,5 @@
 // Classificação de cada pato
-package Piscopatos;
+package Rodolfo;
 public class Classificacao{
     public static void main (String[] args) {
         Pato tank = new Pato();
