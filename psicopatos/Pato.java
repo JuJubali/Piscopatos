@@ -1,20 +1,30 @@
+
 //Métodos: Atacar, correr e descançar
 //Atributos: Mana, stamina, saúde. OS VALORES SÃO FIXOS PARA TODOS OS PATOS
 //Mana: Valor fixo para todos os patos
 //Stamina: Começa fixo. Se atacar, stamina diminui. Se descançar, stamina aumenta
 //Saúde: Se descançar, aumenta 
 
-package Rodolfo;
+package psicopatos;
+
 public class Pato {
 
-    public String nome;
-    public int mana;
-    public int stamina;
-    public int pontodeVida;
-    public int pontodeDano;
-    public int pontodeResistencia;
-    public int pontodeInteligencia;
-
+    private String nome;
+    private int mana;
+    private int stamina;
+    private int pontodeVida;
+    private int pontodeDano;
+    private int pontodeResistencia;
+    private int pontodeInteligencia;
+    public Pato(String nome, int mana, int stamina, int pontodeVida, int pontodeDano, int pontodeResistencia, int pontodeInteligencia){ 
+        this.nome = nome;
+        this.mana = mana;
+        this.stamina = stamina;
+        this.pontodeVida = pontodeVida;
+        this.pontodeDano = pontodeDano;
+        this.pontodeResistencia = pontodeResistencia;
+        this.pontodeInteligencia = pontodeInteligencia;
+    }
 
     public int getMana() {
         return mana;
@@ -80,7 +90,7 @@ public class Pato {
             System.out.println("Stamina insuficiente!");
         }
         else {
-            System.out.println("Correu!");
+            System.out.println(nome+ " correu!");
         }
     }
 
@@ -89,23 +99,23 @@ public class Pato {
         stamina = stamina + 2;
         if (pontodeVida >= 10){
             pontodeVida = 10;
-            System.out.println("Sua vida está cheia");
+            System.out.println("A vida de " +nome+ " está cheia");
         }
         
         if (stamina >= 10){
             stamina = 10;
-            System.out.println ("Sua stamina está cheia");
+            System.out.println ("A stamina de " +nome+ " aumentou");
         }
         if (pontodeVida == 10 && stamina == 10){
             System.out.println ("Sua vida e a sua stamina já estão cheias");
         }
         else{  
-            System.out.println ("Descançando zzz");
+            System.out.println (nome + " está descançando zzz");
         }
     }
 
     public void informacoes(){
-        System.out.println("Informações: Mana: " +getMana() +" Stamina: " +getStamina() +" Vida: " +getpontodeVida() +" Dano: " +getPontodeDano() +" Resistência: " +getPontodeResistencia() +" Inteligência: " +getPontodeInteligencia());
+        System.out.println("Informações de " +nome+ " -> Mana: " +getMana() +" Stamina: " +getStamina() +" Vida: " +getpontodeVida() +" Dano: " +getPontodeDano() +" Resistência: " +getPontodeResistencia() +" Inteligência: " +getPontodeInteligencia());
     }
 
 }

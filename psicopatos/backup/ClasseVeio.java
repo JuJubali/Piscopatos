@@ -1,8 +1,11 @@
+package psicopatos;
+
 // Classificação de cada pato
-package Rodolfo;
-public class Classificacao{
+//package psicopatos;
+
+public class ClasseVeio{
     public static void main (String[] args) {
-        Pato tank = new Pato();
+        psicopatos.Pato tank = new psicopatos.Pato();
             tank.setMana(10);
             tank.setStamina(10);
             tank.setPontodeVida(5);
@@ -10,9 +13,10 @@ public class Classificacao{
             tank.setPontodeResistencia(5);
             tank.setPontodeInteligencia(2); 
             tank.informacoes();
-          
+            tank.correr();
+            tank.informacoes();
         
-        Pato lutador = new Pato();
+        psicopatos.Pato lutador = new psicopatos.Pato();
             lutador.setMana(10);
             lutador.setStamina(10);
             lutador.setPontodeVida(10);
@@ -20,14 +24,18 @@ public class Classificacao{
             lutador.setPontodeResistencia(2);
             lutador.setPontodeInteligencia(5);
             lutador.informacoes();
+            lutador.correr();
+            lutador.informacoes();
 
-        Pato invocador = new Pato();
+        psicopatos.Pato invocador = new psicopatos.Pato();
             invocador.setMana(10);
             invocador.setStamina(10);
             invocador.setPontodeVida(2);
             invocador.setPontodeDano(5);
             invocador.setPontodeResistencia(5);
             invocador.setPontodeInteligencia(10);
+            invocador.informacoes();
+            invocador.correr();
             invocador.informacoes();
     }
 }
