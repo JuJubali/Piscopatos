@@ -8,14 +8,13 @@
 package psicopatos;
 
 public class Pato {
-
-    private String nome;
-    private int mana;
-    private int stamina;
-    private int pontodeVida;
-    private int pontodeDano;
-    private int pontodeResistencia;
-    private int pontodeInteligencia;
+    protected String nome;
+    protected int mana;
+    protected int stamina;
+    protected int pontodeVida;
+    protected int pontodeDano;
+    protected int pontodeResistencia;
+    protected int pontodeInteligencia;
     public Pato(String nome, int mana, int stamina, int pontodeVida, int pontodeDano, int pontodeResistencia, int pontodeInteligencia){ 
         this.nome = nome;
         this.mana = mana;
