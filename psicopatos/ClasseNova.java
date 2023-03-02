@@ -4,26 +4,31 @@ package psicopatos;
 public class ClasseNova{
     public static void main (String[] args) {
         //Instânciando Tank
-        Tank id1 = new Tank("Nyxlim", 10, 10, 5, 5, 10, 2);
-        id1.informacoes();
-        id1.correr();
-        id1.informacoes();
-        id1.inteligenciaAdd();
-        id1.inteligenciaAdd();
-        id1.informacoes();
+        Tank tankUm = new Tank("Nyxlim", 10, 10, 5, 5, 10, 2);
+        tankUm.informacoes();
+        tankUm.correr();
+        tankUm.informacoes();
+        tankUm.inteligenciaAdd();
+        tankUm.inteligenciaAdd();
+        tankUm.informacoes();
         
         //Instânciando lutador
-        Pato lutador = new Pato("SuperPlayer", 10, 10, 5, 10, 2, 5);
+        Lutador lutador = new Lutador("SuperPlayer", 10, 10, 5, 10, 2, 5);
         lutador.informacoes();
         lutador.correr();
         lutador.informacoes();
+        lutador.resistenciaAdd();
+        lutador.resistenciaAdd();
+        lutador.informacoes();
 
         //Instanciando invocador
-        Pato invocador = new Pato("JooJ", 10, 10, 2, 5, 5, 10);
+        Invocador invocador = new Invocador("JooJ", 10, 10, 2, 5, 5, 10);
         invocador.informacoes();
         invocador.correr();
         invocador.informacoes();
-
+        invocador.vidaAdd();
+        invocador.vidaAdd();
+        invocador.informacoes();
     }
 }
   
