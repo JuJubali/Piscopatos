@@ -1,2 +1,1 @@
-# Piscopatos
-# RPG
+Um RPG com Patos
